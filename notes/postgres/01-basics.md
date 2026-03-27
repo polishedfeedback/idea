@@ -16,3 +16,10 @@
 ### Connecting to the database directly
 - `psql {DATABASE_NAME}` - connect directly to the database without going to the REPL
 - `psql -U {DATABASE_OWNER} -d {DATABASE_NAME} -h {HOST} -p {PORT_NAME}`
+
+### Setting passwords
+- `psql {DATABASE_USER}` - `\password {USER_NAME}`
+- `psql -U {USER_NAME} -d {DATABASE_NAME} -W` - this enforces to ask password
+
+### Postgres config file
+- `pg_hba.conf` - you can also run `psql postgres -c "SHOW_HBA_FILE";`
