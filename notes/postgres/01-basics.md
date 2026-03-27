@@ -1,0 +1,18 @@
+## Postgres basics and learning
+
+### The basics
+- `postgres` - this is the server that runs in the background (like a daemon)
+- `psql` - this is the client that we can use to interact with postgres from the terminal / commandline
+- `createdb {DATABASE_NAME}` - can run this even outside psql which creates a postgres database
+- `psql postgres` - connects to default postgres database and puts you inside REPL mode
+
+### Inside the REPL
+- Once you're inside the REPL, you can run these commands
+  - `CREATE DATABASE {DATABASE_NAME};` - creates a database
+  - `\l` - to list out the databases
+  - `\c {DATABASE_NAME}` - to connect to your database
+  - `\q` - to quit postgres
+
+### Connecting to the database directly
+- `psql {DATABASE_NAME}` - connect directly to the database without going to the REPL
+- `psql -U {DATABASE_OWNER} -d {DATABASE_NAME} -h {HOST} -p {PORT_NAME}`
