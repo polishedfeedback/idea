@@ -23,3 +23,7 @@
 
 ### Postgres config file
 - `pg_hba.conf` - you can also run `psql postgres -c "SHOW_HBA_FILE";`
+
+### See the tables inside database inside psql when you're connected to the database
+- `\dt` - see all the tables. `Did not find any realtions` suggest that you have no tables inside your connected database
+- - `\d {TABLE_NAME}` - shows the columns inside the table
